@@ -167,7 +167,7 @@ newLinesAfterMethodPattern est un booleen indiquant s'il faut passer une ligne a
         
 
 # Semaine du 06/05:
-tests unitaires sur le formatage des différents noeuds syntaxiques en fonction d'une configuration donné.
+J'ai écrit de tests unitaires sur le formatage de chacun des noeuds syntaxiques en fonction de differentes configurations.
 
 Exemple d'une methode de test verifiant que les éléments d'un assignmentNode soient espacé:    
 le test:
@@ -194,11 +194,10 @@ les configurations sont toutes crées avec "self contextClass new" qui les initi
 
 les tests dépendent donc d'une configuration par défaut (composé d'une trentaine d'attributs).
 
-
- J'ai donc modifié les configuration en utilisant "self contextClass basicNew"
+J'ai donc modifié les configuration en utilisant "self contextClass basicNew".
  
- basic new crée une configuration avec tous ses attributs à nil.
+basicNew crée une configuration avec tous ses attributs à nil.
  
- En partant de cette configuration vide, j'instancie les attributs nécessaire et laisse les autres à nil.
+En partant de cette configuration vide, j'instancie les attributs nécessaire et laisse les autres à nil.
  
- Ce qui me permet de faire des tests en isolant au plus la configuration.
+Ce qui me permet de faire les tests en isolant au plus la configuration.
