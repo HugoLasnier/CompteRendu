@@ -82,7 +82,7 @@
       </tr>
       <tr>
         <td>message à mots clés(receveur clé1:arg1 clé2:arg2)</td>
-        <td>2 between : 10 and: 2</td>
+        <td>2 between: 10 and: 2</td>
       </tr>
 </table>
 
@@ -162,7 +162,7 @@ Pour cela il possede un attribut nommé codeStream dans lequel il écrit le rés
 La configuration est un attribut du pretty printer (contextClass),
 elle est une instance de la classe BIPrettyPrinterContext et contient une trentaine de variables.
 
-par exemple: 
+Par exemple: 
 newLinesAfterMethodPattern est un booleen indiquant s'il faut passer une ligne après la signature d'une methode
         
 
@@ -186,13 +186,13 @@ la configuration:
     ^ self contextClass new
 
 # Semaine du 13/05:
-suite des tests sur le formatage des noeuds de l'ast.
+Suite des tests sur le formatage des noeuds de l'ast.
 
 Cependant les tests présentent un défaut.
     
-les configurations sont toutes crées avec "self contextClass new" qui les initialises avec des valeurs par defaut.
+Les configurations sont toutes crées avec "self contextClass new" qui les initialises avec des valeurs par defaut.
 
-les tests dépendent donc d'une configuration par défaut (composé d'une trentaine d'attributs).
+Les tests dépendent donc d'une configuration par défaut (composé d'une trentaine d'attributs).
 
 J'ai donc modifié les configuration en utilisant "self contextClass basicNew".
  
