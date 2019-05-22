@@ -150,13 +150,18 @@ Il existe des configurations afin de définir les règles de formatage.
 
 # Semaine du 29/04:
 J'ai regardé comment le pretty printer est implémenté.
+
 Le RBProgrameNodeVisitor est un visiteur abstrait permettant de visiter les noeuds de l’ast.
 
 Le pretty printer hérite du RBProgrameNodeVisitor.
+
 Il surcharge les méthodes de visite afin de reformater les noeuds visités selon une configuration.
+
 Pour cela il possede un attribut nommé codeStream dans lequel il écrit le résultat.
+
 La configuration est un attribut du pretty printer (contextClass),
 elle est une instance de la classe BIPrettyPrinterContext et contient une trentaine de variables.
+
 par exemple: 
 newLinesAfterMethodPattern est un booleen indiquant s'il faut passer une ligne après la signature d'une methode
         
@@ -182,12 +187,18 @@ la configuration:
 
 # Semaine du 13/05:
 suite des tests sur le formatage des noeuds de l'ast.
+
 Cependant les tests présentent un défaut.
     
 les configurations sont toutes crées avec "self contextClass new" qui les initialises avec des valeurs par defaut.
+
 les tests dépendent donc d'une configuration par défaut (composé d'une trentaine d'attributs).
- 
+
+
  J'ai donc modifié les configuration en utilisant "self contextClass basicNew"
+ 
  basic new crée une configuration avec tous ses attributs à nil.
- en partant de cette configuration vide, j'instancie les attributs nécessaire et laisse les autres à nil.
- ce qui me permet de faire des tests en isolant au plus la configuration.
+ 
+ En partant de cette configuration vide, j'instancie les attributs nécessaire et laisse les autres à nil.
+ 
+ Ce qui me permet de faire des tests en isolant au plus la configuration.
