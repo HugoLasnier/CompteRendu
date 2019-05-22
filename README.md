@@ -58,7 +58,7 @@
       </tr>
       <tr>
         <td>séparateur</td>
-        <td>message1. Message2</td>
+        <td>message1. message2</td>
       </tr>
       <tr>
         <td>return</td>
