@@ -158,8 +158,7 @@ Pour cela il possede un attribut nommé codeStream dans lequel il écrit le rés
 La configuration est un attribut du pretty printer (contextClass),
 elle est une instance de la classe BIPrettyPrinterContext et contient une trentaine de variables.
 par exemple: 
-
-    newLinesAfterMethodPattern: un booleen indiquant s'il faut passer une ligne après la signature d'une methode
+newLinesAfterMethodPattern est un booleen indiquant s'il faut passer une ligne après la signature d'une methode
         
 
 # Semaine du 06/05:
@@ -182,13 +181,13 @@ la configuration:
     ^ self contextClass new
 
 # Semaine du 13/05:
-    suite des tests sur le formatage des noeuds de l'ast.
-    Cependant les tests présentent un défaut.
+suite des tests sur le formatage des noeuds de l'ast.
+Cependant les tests présentent un défaut.
     
-    les configurations sont toutes crées avec "self contextClass new" qui les initialises avec des valeurs par defaut.
-    les tests dépendent donc d'une configuration par défaut (composé d'une trentaine d'attributs).
-    
-    J'ai donc modifié les configuration en utilisant "self contextClass basicNew"
-    basic new crée une configuration avec tous ses attributs à nil.
-    en partant de cette configuration vide, j'instancie les attributs nécessaire et laisse les autres à nil.
-    ce qui me permet de faire des tests en isolant au plus la configuration.
+les configurations sont toutes crées avec "self contextClass new" qui les initialises avec des valeurs par defaut.
+les tests dépendent donc d'une configuration par défaut (composé d'une trentaine d'attributs).
+ 
+ J'ai donc modifié les configuration en utilisant "self contextClass basicNew"
+ basic new crée une configuration avec tous ses attributs à nil.
+ en partant de cette configuration vide, j'instancie les attributs nécessaire et laisse les autres à nil.
+ ce qui me permet de faire des tests en isolant au plus la configuration.
