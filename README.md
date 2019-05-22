@@ -1,5 +1,5 @@
 # CompteRendu
-## Le sujet du stage est d'améliorer le pretty printer Pharo
+## Le sujet du stage est d'améliorer le pretty printer de Pharo
 
 # Présentation de Pharo :
 + un language de programmation orienté objet
