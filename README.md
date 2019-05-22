@@ -10,33 +10,81 @@
 
 # Syntaxe :
 ## éléments syntaxique :
-
-+ commentaire             "un commentaire"
-+ caractère               $a
-+ chaîne de caractère     'uneChaine'
-+ symbole(chaîne unique)  #unSymbole
-+ tableau de littéraux    #(1 2 3 4 5 6 )
-+ entier                  1
-+ booléen                 true, false
-+ indéfinie               nil
+<table>
+      <tr>
+        <td>commentaire</td>
+        <td>"un commentaire"</td>
+      </tr>
+      <tr>
+        <td>caractère</td>
+        <td>$a</td>
+      </tr>
+      <tr>
+        <td>chaîne de caractère</td>
+        <td>'uneChaine'</td>
+      </tr>
+      <tr>
+        <td>symbole(chaîne unique)</td>
+        <td>#unSymbole</td>
+      </tr>
+      <tr>
+        <td>tableau de littéraux</td>
+        <td>#(1 2 3 4 5 6 )</td>
+      </tr>
+      <tr>
+        <td>entier</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>booléen</td>
+        <td>true, false</td>
+      </tr>
+      <tr>
+        <td>indéfinie</td>
+        <td>nil</td>
+      </tr>
+</table>
 
 ## constructeurs :
 
-   + declaration de variable temporaires     | tmp |
-   + affectation de variables                tmp:= uneValeur
-   + séparateur                              message1. Message2
-   + return                                  ^ uneValeur
-   + block (fonction anonyme)                [:x | x+2 ] value: 5
+<table>
+      <tr>
+        <td>declaration de variable temporaires</td>
+        <td>| tmp |</td>
+      </tr>
+      <tr>
+        <td>affectation de variables</td>
+        <td>tmp:= uneValeur</td>
+      </tr>
+      <tr>
+        <td>séparateur</td>
+        <td>message1. Message2</td>
+      </tr>
+      <tr>
+        <td>return</td>
+        <td>^ uneValeur</td>
+      </tr>
+      <tr>
+        <td>block (fonction anonyme)</td>
+        <td>[:x | x+2 ] value: 5</td>
+      </tr>
+</table>
 
 ## les messages dans pharo :
- message unaire (receveur selecteur)
-    3 factorial
-                        
- message binaire : receveur selecteur argument
-    1+2
-
- message à mots clés : receveur clé1:arg1 clé2:arg2
-    2 between : 10 and: 2
+<table>
+      <tr>
+        <td>message unaire (receveur selecteur)</td>
+        <td>3 factorial</td>
+      </tr>
+      <tr>
+        <td>message binaire (receveur selecteur argument)</td>
+        <td>1+2</td>
+      </tr>
+      <tr>
+        <td>message à mots clés(receveur clé1:arg1 clé2:arg2)</td>
+        <td>2 between : 10 and: 2</td>
+      </tr>
+</table>
 
 ## definition de classe de pharo:
 
@@ -77,10 +125,9 @@ est representé ainsi:
 # Le pretty printer
 le pretty printer sert a reformater du code suivant une configuration définie
 
-exemples:
+par exemples l'ajout d'espace pour l'assignation d'une variable:
 
-        ajout d'espace pour l'assignation d'une variable:
-            'tmp:=1' sera reformaté en 'tmp := 1'
+    'tmp:=1' sera reformaté en 'tmp := 1'
 
 Soit une méthode :
 
@@ -142,6 +189,6 @@ la configuration:
     les tests dépendent donc d'une configuration par défaut (composé d'une trentaine d'attributs).
     
     J'ai donc modifié les configuration en utilisant "self contextClass basicNew"
-    basic new crée une configuration avec tout ces attributs à nil.
+    basic new crée une configuration avec tous ses attributs à nil.
     en partant de cette configuration vide, j'instancie les attributs nécessaire et laisse les autres à nil.
     ce qui me permet de faire des tests en isolant au plus la configuration.
