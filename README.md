@@ -201,3 +201,19 @@ basicNew crée une configuration avec tous ses attributs à nil.
 En partant de cette configuration vide, j'instancie les attributs nécessaire et laisse les autres à nil.
  
 Ce qui me permet de faire les tests en isolant au plus la configuration.
+
+# Semaine du 20/05:
+modification et ajout de tests.
+
+correction de configuration pour les tests.
+
+étude des settings:
+      les settings sont les attributs de la configuration.
+      l'objectif est d'étudier ce que fait chacun et de déterminer s'il y a des settings à renommer, remplacer, ou ajouter.
+
+# Semaine du 27/05:
+suite de l'étude des settings.
+
+pair programming sur l'UI du pretty printer:
+      Il s'agit d'un menu dans lequel on peut éditer les valeurs de la configuration (les settings)
+      et prévisualiser un exemple de formatage avec la configuration.
