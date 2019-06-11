@@ -217,3 +217,41 @@ suite de l'étude des settings.
 pair programming sur l'UI du pretty printer:
       Il s'agit d'un menu dans lequel on peut éditer les valeurs de la configuration (les settings)
       et prévisualiser un exemple de formatage avec la configuration.
+
+# Semaine du 3/06:
++ création de méthode d'exemple pour l'UI
+	dans l'UI il y a une zone affichant une méthode d'exemple avant et après formatage par le pretty printer.
+	la méthode peut être sélectionnée parmis plusieurs méthodes d'exemple.
+	j'ai donc fait une méthode pour chaque settings du pretty printer.
+      par exemple:
+
+		newLinesAfterTemporariesExample
+
+			| a | a := 1.
+     Si le setting newLinesAfterTemporaries vaut true l'UI affichera la méthode avec un retour à la ligne après la déclaration:
+
+			newLinesAfterTemporariesExample
+
+			| a |
+			a := 1.
+     Si le setting newLinesAfterTemporaries vaut false l'UI affichera la méthode avec un retour à la ligne après la déclaration:
+		
+			newLinesAfterTemporariesExample
+
+			| a | a := 1.
+     ainsi on peut modifier les settings et regarder les changements de formatage.
+
++ Copie des BIConfigurableFormatter nommée BIEnlumineur et de BIPrettyPrinterContext nommé BIEnlumineurContext.
+C'est dans ces classes que j'effectue les modifications.
+
++ modification des tests pour en faire des tests paramétrés.
+les tests prennent en paramètres le formater et la configuration.
+
++ Début des modifications.
+J'ai commencé a effectuer des modifications dans la classe BIEnlumineur afin de corriger des problèmes du pretty printer.
+
+par exemple le code suivant: |a"comment"b| 
+
+était formaté ainsi :| a"comment" b |
+
+est désormais est formaté: | a "comment" b |
