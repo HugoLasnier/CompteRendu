@@ -255,3 +255,41 @@ par exemple le code suivant: |a"comment"b|
 était formaté ainsi :| a"comment" b |
 
 est désormais est formaté: | a "comment" b |
+
+
+# Semaine du 10/06:
++ la methode settingsOn du pretty printer, instancie des settingNodeBuilder correspondant chacun à un setting.
+par exemple:
+
+	(aBuilder setting: #newLinesAfterMethodComment) label: 'New lines after method comment'.
+
+j'ai créé une methode d'instantation de settingNodeBuilder pour chacun des settings.
+j'ai également ajouté une description et un exemple pour chaque setting
+par exemple:
+	
+	settingsNewLinesAfterMethodComment: aBuilder
+	(aBuilder setting: #newLinesAfterMethodComment)
+		label: 'new lines after method comment';
+		description: 'number of new lines after the comment of the method
+			Example:
+			myMethode
+				"myComment"
+
+				^ true
+			is the result for 2 new lines'
+
++ Dans la configuration certains attributs sont des chaines de characteres correspondant des espaces, par exemple stringFollowingReturn correspondant aux espaces entre le symbole '^' (signifiant return) et la valeur à retourner.
+
+Par example si stringFollowingReturn vaut ' ':
+	
+	^ 1
+	
+Cepandant on peut y mettre n'importe quelle string ce qui peut casser le code.
+
+Par example si stringFollowingReturn vaut 'foo':
+	
+	^foo1
+
+J'ai donc modifié ces attributs de la configuration en les remplacant par des entiers representant le nombre d'espace souhaité.
+
++ J'ai également créé des methodes d'exemples, que l'on peut utiliser dans l'UI afin d'observer le formatage de ces methodes en fonction des valeurs de la configuration.
