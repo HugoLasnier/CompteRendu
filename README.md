@@ -304,17 +304,17 @@ semaine du 17/06:
 
 	par exemple si indentCharacter vaut indentation
 	
-	Transcript
-		cr;
-		cr;
-		cr
+		Transcript
+			cr;
+			cr;
+			cr
 
 	par exemple si indentCharacter vaut space et que numberOfSpacesInIndent vaut 1
 
-	Transcript
-	 cr;
-	 cr;
-	 cr
+		Transcript
+		 cr;
+		 cr;
+		 cr
 
 
 	+ Modification de certaines methodes d'exemples
