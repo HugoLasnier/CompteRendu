@@ -293,3 +293,61 @@ Par example si stringFollowingReturn vaut 'foo':
 J'ai donc modifié ces attributs de la configuration en les remplacant par des entiers representant le nombre d'espace souhaité.
 
 + J'ai également créé des methodes d'exemples, que l'on peut utiliser dans l'UI afin d'observer le formatage de ces methodes en fonction des valeurs de la configuration.
+
+semaine du 17/06:
+	
++ modification d'un setting correspondant aux anciens attributs de la configuration qui étaient une string afin de correspondre aux modifications.
+	 
+	 indentString represente l'identation, j'en ai fait deux attributs: 
+			- indentCharacter qui peut être soit #indentation soit #space.
+			- numberOfSpacesInIndent qui si indentCharacter vaut space correspond aux nombres d'espace dans une indentation
+
+	par exemple si indentCharacter vaut indentation
+	
+	Transcript
+		cr;
+		cr;
+		cr
+
+	par exemple si indentCharacter vaut space et que numberOfSpacesInIndent vaut 1
+
+	Transcript
+	 cr;
+	 cr;
+	 cr
+
+
+	+ Modification de certaines methodes d'exemples
+	Il y en avait beaucoup j'en ai donc rassembler plusieurs en une seul (retainBlankLines).
+
+
+	
+	+ Modification de la class d'exemple
+	Afin de pouvoir avoir toutes les methodes de test à l'ouverture de l'UI, j'ai modifié la classe contenant les exemples.
+
+	+ Resolution d'un bug 
+		J'ai résolu un bug qui survenait lorsque l'on changeait de configuration, le formatage lui ne variait pas totalement.
+
+	+ recherche de mauvais formatage à corriger
+	par exemple: 
+		
+		^ x = 0
+		ifTrue: [ tan := y asFloat / x asFloat ]
+		ifFalse: [ tan := y asFloat / x asFloat.
+			theta := tan arcTan.
+			theta := tan arcSin.
+			theta := tan arcCos ]
+			
+	dans le ifFalse on prefererais passer à la ligne après l'ouverture du bloc:
+	
+		^ x = 0
+		ifTrue: [ tan := y asFloat / x asFloat ]
+		ifFalse: [ 
+			tan := y asFloat / x asFloat.
+			theta := tan arcTan.
+			theta := tan arcSin.
+			theta := tan arcCos ]
+			
+	+ début de modification de formatage
+	
+	
