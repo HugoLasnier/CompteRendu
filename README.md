@@ -294,7 +294,7 @@ J'ai donc modifié ces attributs de la configuration en les remplacant par des e
 
 + J'ai également créé des methodes d'exemples, que l'on peut utiliser dans l'UI afin d'observer le formatage de ces methodes en fonction des valeurs de la configuration.
 
-semaine du 17/06:
+# semaine du 17/06:
 	
 + modification d'un setting correspondant aux anciens attributs de la configuration qui étaient une string afin de correspondre aux modifications.
 	 
